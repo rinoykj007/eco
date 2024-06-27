@@ -5,7 +5,7 @@ function Items(props) {
   return (
     <div className='item'>
         <img src={props.image} alt="" style={{width:"15rem"}} />
-        <p> {props.name}</p>
+        <p className='item-name'> {props.name}</p>
         <div className="item-prices">
             <div className="item-price-new">
                 {props.new_price}
