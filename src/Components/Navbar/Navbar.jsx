@@ -1,12 +1,13 @@
 import "./Navbar.css";
 import logo from "../Images/logo.png";
 import cart_icon from "../Images/cart_icon.png";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ banners }) {
   const [menu, setMenu] = useState("shop");
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for responsive menu
+  const { categoryName } = useParams();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -68,6 +69,12 @@ function Navbar() {
           <div className="nav-cart-count">{0}</div>
         </div>
       </div>
+
+      {categoryName === "women" && (
+        <img src={banners.women} alt="Women Banner" />
+      )}
+      {categoryName === "men" && <img src={banners.men} alt="Men Banner" />}
+      {categoryName === "kid" && <img src={banners.kid} alt="Kids Banner" />}
     </div>
   );
 }
