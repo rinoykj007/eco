@@ -7,17 +7,16 @@ import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import LoginSignUp from "./Pages/LoginSignUp";
 import Footer from "./Footer/footer";
+
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Navbar />
-
         <Routes>
           <Route path="/" element={<Shop />} />
-          <Route path="/men" element={<ShopCategory />} />
-          <Route path="/" element={<ShopCategory />} />
-          <Route path=":productId" element={<Product />}></Route>
+          <Route path="/category/:categoryName" element={<ShopCategory />} />
+          <Route path="/product/:productId" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignUp />} />
         </Routes>

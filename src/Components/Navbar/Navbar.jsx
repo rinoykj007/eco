@@ -31,31 +31,34 @@ function Navbar() {
               setIsMenuOpen(false);
             }}
           >
-            <Link to="/">shop</Link> {menu === "shop" ? <hr /> : <></>}
+            <Link to="/">Shop</Link> {menu === "shop" ? <hr /> : null}
           </li>
           <li
             onClick={() => {
-              setMenu("Mens");
+              setMenu("mens");
               setIsMenuOpen(false);
             }}
           >
-            <Link to="/Mens">Men</Link> {menu === "Mens" ? <hr /> : <></>}
+            <Link to="/category/men">Men</Link>{" "}
+            {menu === "mens" ? <hr /> : null}
           </li>
           <li
             onClick={() => {
-              setMenu("Women");
+              setMenu("women");
               setIsMenuOpen(false);
             }}
           >
-            <Link to="/Women">Women</Link> {menu === "Women" ? <hr /> : <></>}
+            <Link to="/category/women">Women</Link>{" "}
+            {menu === "women" ? <hr /> : null}
           </li>
           <li
             onClick={() => {
-              setMenu("Kids");
+              setMenu("kids");
               setIsMenuOpen(false);
             }}
           >
-            <Link to="/Kids">Kids</Link> {menu === "Kids" ? <hr /> : <></>}
+            <Link to="/category/kid">Kids</Link>{" "}
+            {menu === "kids" ? <hr /> : null}
           </li>
         </ul>
 
