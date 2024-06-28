@@ -6,9 +6,10 @@
   gap: 1rem;
 }
 .newsletter {
-  margin: 5rem;
-  padding: 5rem;
-  background: linear-gradient(180deg, #fde1ff, #e1ffea22 50%);
+  margin: 2.5rem;
+  padding: 2.5rem;
+
+  background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
 }
 input[type="email"] {
   border-radius: 22px;
