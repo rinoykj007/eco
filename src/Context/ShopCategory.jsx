@@ -18,11 +18,13 @@ function ShopCategory() {
         {products.map((product) => (
           <div key={product.id} className="product-Item">
             <div className="image-conatiner">
-              <img
-                className="container-img "
-                src={product.image}
-                alt={product.name}
-              />
+              <Link to={`/product/${product.id}`}>
+                <img
+                  className="container-img "
+                  src={product.image}
+                  alt={product.name}
+                />
+              </Link>
             </div>
             <div className="product-Item-details">
               <h5>{product.name}</h5>
