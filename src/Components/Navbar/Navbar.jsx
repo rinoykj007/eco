@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router-dom";
 
 function Navbar({ banners }) {
   const [menu, setMenu] = useState("shop");
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for responsive menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { categoryName } = useParams();
 
   const toggleMenu = () => {
@@ -64,7 +64,9 @@ function Navbar({ banners }) {
         </ul>
 
         <div className="nav-login-cart">
-          <button>Login</button>
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
           <img src={cart_icon} alt="cart_icon" />
           <div className="nav-cart-count">{0}</div>
         </div>
